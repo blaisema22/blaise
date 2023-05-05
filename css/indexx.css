@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(photo/back.png);
+}
+
+:root{
+    /*===================width==========*/
+
+	--width-lg:90%;
+	--width-md:86%; 
+	--width-sm:84%; 
+	/*====================color================*/
+	--color-bg:black;
+	--color-text:rgb(214, 63, 63);
+	--color-sp:rgb(216, 216, 216);
+	--color-btn:orange;
+	--color-sector:rgb(196, 196, 196);
+	--color-blue:rgb(203, 14, 216);
+}
