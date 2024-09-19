@@ -566,7 +566,7 @@ small span {
 	grid-template-columns: 1fr 1fr 1fr;
 }
 .schm{
-	width: 35%;
+	width: 20%;
 	height: 35vh;
-	margin: 1% 2;
+	margin: 1% 2px;
 }
