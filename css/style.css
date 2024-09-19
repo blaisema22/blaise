@@ -563,7 +563,7 @@ small span {
 /* ======================================== project ===================== */
 .proj1{
 	display: flex;
-	flex-direction: column-reverse;
+	grid-template-columns: 1;
 	word-wrap: break-word;
 }
 .schm{
