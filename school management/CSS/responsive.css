@@ -1,0 +1,80 @@
+@media screen AND (max-width: 1024px){
+    .sign{
+        
+            width: 30%;
+            height: 50vh;
+            background: white;
+            box-shadow: 0 0 12px;
+            border-radius: 5px;
+            margin: 12% 36%;
+    }
+    
+}
+@media screen AND (max-width: 900px) {
+
+    .sign{
+        
+        width: 45%;
+        height: 50vh;
+        background: white;
+        box-shadow: 0 0 12px;
+        border-radius: 5px;
+        margin: 10% 15%;
+}
+  }
+  @media screen AND (max-width:736px) {
+
+    .sign{ 
+        width: 54%;
+        height: 50vh;
+        background: white;
+        box-shadow: 0 0 12px;
+        border-radius: 5px;
+        margin: 10% 15%;
+}
+    .links{
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+  }
+
+@media screen AND (max-width: 640px) {
+
+    .sign{
+        
+        width: 65%;
+        height: 50vh;
+        background: white;
+        box-shadow: 0 0 12px;
+        border-radius: 5px;
+        margin: 10% 15%;
+}
+	}
+	
+  
+
+  @media screen AND (max-width: 320px) {
+    .sign{
+        
+        width: 80%;
+        height: 50vh;
+        background: white;
+        box-shadow: 0 0 12px;
+        border-radius: 5px;
+        margin: 10% 14%;
+}
+  }
+  @media screen AND (max-width: 280px) {
+    .sign{
+        
+        width: 90%;
+        height: 50vh;
+        background: white;
+        box-shadow: 0 0 12px;
+        border-radius: 5px;
+        margin: 10% 13%;
+}
+  }
+  

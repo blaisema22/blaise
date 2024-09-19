@@ -569,8 +569,8 @@ link .proj1 img{
 	width: 90%;
 	height: 100%;
 }
-img .schm{
-	gap: 5px;
+.schm{
+	gap:10px;
 	width: 100%;
 	height: 35vh;
 	margin: 2% 2px;
