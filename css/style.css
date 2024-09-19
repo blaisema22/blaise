@@ -564,7 +564,6 @@ small span {
 .proj1{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	word-wrap: break-word;
 }
 .schm{
 	width: 35%;
