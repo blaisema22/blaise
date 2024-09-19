@@ -562,8 +562,8 @@ small span {
 }
 /* ======================================== project ===================== */
 .proj1{
-	display: flex;
-	grid-template-columns: 1;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 	word-wrap: break-word;
 }
 .schm{
