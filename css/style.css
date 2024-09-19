@@ -570,8 +570,10 @@ link .proj1 img{
 	height: 100%;
 }
 .schm{
+	gap: 5px;
 	width: 20%;
 	height: 35vh;
 	margin: 1% 2px;
 	padding: 1% 2%;
+	border-radius: 5px;
 }
