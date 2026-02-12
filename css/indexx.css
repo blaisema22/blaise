@@ -1,28 +1,39 @@
-<style>* {
-    margin: 0;
-    padding: 0;
+/* Reset */
+
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0
 }
 
- :root {
-    --color-bg: #000000;
-    --color-text: #875e5e;
-    --color-sp: rgba(177, 177, 177, 0.788);
-    --color-btn: #fea706;
-    --color-sector: #c4c4c4;
-    --color-blue: #02abff;
+:root {
+    --color-bg: rgba(15, 23, 42, 0.65);
+    height: 70px;
+    /* fixed navbar height for layout calculations */
+    --color-text: #0f1724;
+    /* primary text */
+    --color-sp: #f8fafc;
+    /* light surface */
+    --color-btn: #0d6efd;
+    /* primary accent */
+    --color-sector: #ffffff;
+    /* section backgrounds */
+    --color-blue: #06b6d4;
+    /* secondary accent */
+    --color-heading: #071233;
     --width-lg: 90%;
     --width-md: 86%;
     --width-sm: 84%;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     line-height: 1.6;
     background-image: url('photo/back.png');
     background-size: cover;
     background-attachment: fixed;
     scroll-behavior: smooth;
+    color: var(--color-text);
 }
 
 img {
@@ -32,27 +43,30 @@ img {
 }
 
 .container {
-    width: var(--width-lg);
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 
 /* Navigation */
 
 nav {
-    background: var(--color-bg);
+    background: rgba(255, 255, 255, 0.86);
+    backdrop-filter: blur(6px);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 20%;
+    height: 100%;
+    padding: 0 20px;
 }
 
 .logo {
@@ -66,16 +80,15 @@ nav {
 }
 
 .menu ul li a {
-    color: var(--color-btn);
+    color: var(--color-heading);
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 23px;
-    transition: color 0.3s;
-    padding: 0.5rem 1rem;
+    font-size: 15px;
+    transition: color 0.18s ease;
+    padding: 8px 12px;
 }
 
 .menu ul li a:hover {
-    color: azure;
+    color: var(--color-btn);
 }
 
 .sideBar {
@@ -88,12 +101,18 @@ nav {
 /* Hero Section */
 
 #home {
-    margin-top: 20%;
+    margin-top: 0;
     position: relative;
+    min-height: calc(100vh - 70px);
+    /* fill remaining viewport under navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .Back {
-    height: 550px;
+    height: 0;
+    /* remove large spacer so Home sits under navbar */
     position: relative;
 }
 
@@ -103,39 +122,48 @@ nav {
 }
 
 .home {
-    margin-top: -101vh;
+    margin-top: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    gap: 2rem;
+    justify-content: space-between;
+    padding: 48px 0;
+    gap: 32px;
+}
+
+.Image {
+    width: min(420px, 40%);
 }
 
 .Image img {
-    padding-top: 10%;
-    width: 80vh;
-    max-width: 500px;
-    border-radius: 50%;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
 }
 
 .Home h1 {
-    font-size: 60px;
-    color: #000000;
-    margin-bottom: 1rem;
+    font-size: 56px;
+    line-height: 1.02;
+    color: var(--color-heading);
+    margin-bottom: 0.3rem;
 }
 
 .Home h1 span {
-    color: blue;
+    color: var(--color-btn);
 }
 
 .Home h3 span {
-    font-size: 30px;
+    font-size: 20px;
     color: var(--color-text);
+    font-weight: 500
 }
 
 .Home p span {
-    font-size: 25px;
-    color: var(--color-btn);
+    font-size: 16px;
+    color: var(--muted)
 }
 
 
@@ -216,7 +244,8 @@ nav {
 
 .intercontainer h2 span {
     font-size: 0.8em;
-    color: rgba(255, 0, 76, 0.966);
+    color: var(--color-btn);
+    /* use primary accent color for SERVICES */
 }
 
 .Experince {
@@ -477,7 +506,8 @@ nav {
         margin-top: -80vh;
     }
     .Image {
-        width: 60vh;
+        width: 80%;
+        max-width: 420px;
     }
     .cardcontainer {
         grid-template-columns: 1fr;
