@@ -1,0 +1,526 @@
+/* Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+:root {
+    --color-bg: rgba(15, 23, 42, 0.65);
+    height: 70px;
+    /* fixed navbar height for layout calculations */
+    --color-text: #0f1724;
+    /* primary text */
+    --color-sp: #f8fafc;
+    /* light surface */
+    --color-btn: #0d6efd;
+    /* primary accent */
+    --color-sector: #ffffff;
+    /* section backgrounds */
+    --color-blue: #06b6d4;
+    /* secondary accent */
+    --color-heading: #071233;
+    --width-lg: 90%;
+    --width-md: 86%;
+    --width-sm: 84%;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    line-height: 1.6;
+    background-image: url('photo/back.png');
+    background-size: cover;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+    color: var(--color-text);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* Navigation */
+
+nav {
+    background: rgba(255, 255, 255, 0.86);
+    backdrop-filter: blur(6px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 15%;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.menu ul li a {
+    color: var(--color-heading);
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.18s ease;
+    padding: 8px 12px;
+}
+
+.menu ul li a:hover {
+    color: var(--color-btn);
+}
+
+.sideBar {
+    width: 50px;
+    display: none;
+    cursor: pointer;
+}
+
+
+/* Hero Section */
+
+#home {
+    margin-top: 0;
+    position: relative;
+    min-height: calc(100vh - 70px);
+    /* fill remaining viewport under navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Back {
+    height: 0;
+    /* remove large spacer so Home sits under navbar */
+    position: relative;
+}
+
+.Back img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.home {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 48px 0;
+    gap: 32px;
+}
+
+.Image {
+    width: min(420px, 40%);
+}
+
+.Image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.Home h1 {
+    font-size: 56px;
+    line-height: 1.02;
+    color: var(--color-heading);
+    margin-bottom: 0.3rem;
+}
+
+.Home h1 span {
+    color: var(--color-btn);
+}
+
+.Home h3 span {
+    font-size: 20px;
+    color: var(--color-text);
+    font-weight: 500
+}
+
+.Home p span {
+    font-size: 16px;
+    color: var(--muted)
+}
+
+
+/* About Section */
+
+.about {
+    background: var(--color-sector);
+    padding: 3rem 0;
+    margin-top: 10%;
+}
+
+.aboutcontainer {
+    padding: 3rem;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.aboutleft h2 {
+    color: var(--color-btn);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.aboutleft h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.aboutleft p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.back {
+    width: 400px;
+}
+
+.cardleft {
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.cardleft h2 {
+    color: var(--color-btn);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cardleft p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+
+/* Services Section */
+
+.inter {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.intercontainer {
+    background: white;
+    border-radius: 20px;
+    padding: 1rem;
+    display: inline-block;
+}
+
+.intercontainer h2 {
+    color: var(--color-btn);
+}
+
+.intercontainer h2 span {
+    font-size: 0.8em;
+    color: var(--color-btn);
+    /* use primary accent color for SERVICES */
+}
+
+.Experince {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 70px;
+    gap: 2rem;
+}
+
+.TopColor {
+    padding: 1.5rem;
+    background: var(--color-sp);
+    border-radius: 10px;
+    position: relative;
+    min-height: 300px;
+}
+
+.TopColor img {
+    height: 150px;
+    border-radius: 10px;
+}
+
+.TopColor h4 {
+    color: var(--color-btn);
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.TopColor li {
+    color: white;
+    margin: 0.5rem 0;
+    list-style-position: inside;
+}
+
+
+/* Stats Section */
+
+.experince {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.exper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--color-blue);
+    border-radius: 20px;
+    padding: 1.5rem;
+}
+
+.img {
+    width: 18%;
+}
+
+.expart small {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.expart small span {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+
+/* Projects Section */
+
+.proj1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.schm {
+    background: var(--color-sp);
+    border-radius: 9px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.schm:hover {
+    transform: translateY(-5px);
+}
+
+.schm a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.schm img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.schm p {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-btn);
+}
+
+
+/* Contact Cards */
+
+.cardcontainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.Card {
+    background: var(--color-sp);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.Card .imag {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+}
+
+.Card p {
+    line-height: 1.6;
+    color: #333;
+}
+
+
+/* Footer */
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 5rem 2rem;
+    background: rgb(35, 34, 34);
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    margin-top: 3rem;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    transition: transform 0.3s;
+}
+
+.phone:hover {
+    transform: translateX(5px);
+}
+
+.phone a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.phone img,
+.phone ion-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--color-btn);
+}
+
+.paragraph {
+    color: var(--color-sp);
+    line-height: 1.5;
+}
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: var(--width-md);
+    }
+    .sideBar {
+        display: block;
+    }
+    #sideNav {
+        position: fixed;
+        width: 300px;
+        height: 60vh;
+        right: -300px;
+        top: 100px;
+        z-index: 999;
+        transition: 0.5s;
+        background: var(--color-bg);
+        border-bottom-left-radius: 7px;
+    }
+    #sideNav.active {
+        right: 0;
+    }
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+    }
+    .menu ul li {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+    .box {
+        grid-template-columns: 1fr;
+    }
+    .back {
+        margin: 2rem auto;
+    }
+    .Experince {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+    .experince {
+        grid-template-columns: 1fr;
+    }
+    .proj1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        width: var(--width-sm);
+    }
+    .Home h1 {
+        font-size: 40px;
+    }
+    .Home h3 span {
+        font-size: 20px;
+    }
+    .Home p span {
+        font-size: 18px;
+    }
+    .home {
+        flex-direction: column;
+        margin-top: -80vh;
+    }
+    .Image {
+        width: 80%;
+        max-width: 420px;
+    }
+    .cardcontainer {
+        grid-template-columns: 1fr;
+    }
+    .proj1 {
+        grid-template-columns: 1fr;
+    }
+    .footer {
+        grid-template-columns: 1fr;
+    }
+    .Experince {
+        padding: 1rem;
+    }
+}
+
+</style>
