@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 // Import photo
-import profileImg from "./assets/profile.png";
+import profileImg from "./assets/profile.jpg";
 
 const NAV_LINKS = ["Home", "About", "Skills", "Experience", "Certifications", "Contact"];
 
